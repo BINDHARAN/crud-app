@@ -29,7 +29,7 @@ export default function App() {
               <Offcanvas.Title id="offcanvasNavbarLabel">Goto</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3 ">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
 
                 <ul>
                   <li>

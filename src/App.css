@@ -74,6 +74,11 @@ ul {
   font-weight: 400;
   list-style-type:circle;
 }
+ #offcanvasNavbar{
+ background-color: rgb(240, 240, 243);
+ color: black;
+ font-family: var(--font-serif);
+}
 
 .home {
   margin-top: 190px;
@@ -108,9 +113,14 @@ ul {
     height: auto;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .home {
     margin-top: 80px;
     font-size: large;
+  }
+  #offcanvasNavbar{
+    width: 60%;
+    height: auto;
   }
 }
