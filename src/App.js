@@ -1,3 +1,4 @@
+//import
 import "./App.css";
 import { Switch, Route, Link } from "react-router-dom";
 import { list } from "./list";
@@ -10,13 +11,16 @@ import { EditCharacters } from "./editCharacter";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap'
 
+// App component
 
 export default function App() {
+
   const [initialList, setInitialList] = useState(list)
 
   return (
     <div className="App">
-  <Navbar bg="dark" variant="dark" expand={false}>
+      {/* bootstrap  offcanvas Navabr */}
+      <Navbar bg="dark" variant="dark" expand={false}>
         <Container fluid>
           <Navbar.Brand>Marvel Characters</Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
@@ -29,30 +33,31 @@ export default function App() {
               <Offcanvas.Title id="offcanvasNavbarLabel">Goto</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
 
+              <Nav className="justify-content-end flex-grow-1 pe-3">
                 <ul>
+
                   <li>
                     <Link to="/">Home</Link>
                   </li>
-                  <li>
 
+                  <li>
                     <Link to="/characters" >characters</Link>
                   </li>
 
                   <li>
-
                     <Link to="/characters/add" >Add-characters</Link>
                   </li>
 
                 </ul>
               </Nav>
+
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-
-     <Switch>
+      {/* switching and routing and also passing props */}
+      <Switch>
         <Route path="/characters/add">
           <AddCharacters initialList={initialList} setInitialList={setInitialList} />
         </Route>
@@ -69,8 +74,8 @@ export default function App() {
           < Msg />
         </Route>
         <Route path="**"> <NotFound /> </Route>
-     </Switch>
-    
+      </Switch>
+
     </div>
   );
 }

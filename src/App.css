@@ -13,14 +13,19 @@
   margin: 0;
   padding: 0;
 }
+
+/* 404 error img */
 .error-img {
   width: 65%;
   height: 500px;
 }
 
-.nav{
+/* nav bar */
+.nav {
   margin-bottom: 150px;
 }
+
+/* card img  and hover effect*/
 
 .img {
   width: 100%;
@@ -30,9 +35,9 @@
 
 .img:hover {
   transform: translateY(2px);
-  box-shadow: 2px 2px 20px 2px rgb(34, 32, 31);
 }
 
+/* card */
 .card {
   padding: 10px;
   font-size: 20px;
@@ -40,6 +45,7 @@
   text-align: justify;
 }
 
+/* sytling card title,sub title and other content */
 .cardTitle {
   font-family: 'Rubik Beastly', cursive;
   font-size: 25px;
@@ -47,7 +53,7 @@
   margin: opx;
 }
 
-.sub-title{
+.sub-title {
   font-family: 'Pacifico', cursive;
   font-style: oblique;
   font-weight: bolder;
@@ -65,6 +71,8 @@
   align-items: center;
 }
 
+/* navbar items */
+
 ul {
   gap: 30px;
   display: flex;
@@ -72,13 +80,15 @@ ul {
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 400;
-  list-style-type:circle;
+  list-style-type: circle;
 }
- #offcanvasNavbar{
- background-color: rgb(240, 240, 243);
- color: black;
- font-family: var(--font-serif);
+#offcanvasNavbar {
+  background-color: rgb(240, 240, 243);
+  color: black;
+  font-family: var(--font-serif);
 }
+
+/* styling home page text */
 
 .home {
   margin-top: 190px;
@@ -86,6 +96,7 @@ ul {
   font-family: var(--font-serif);
 }
 
+/* arranging from and styling */
 .character_form {
   display: flex;
   flex-direction: column;
@@ -106,7 +117,7 @@ ul {
   padding: 12px;
   border-radius: 20px;
 }
-
+/* media query for responsive */
 @media only screen and (max-width: 600px) {
   .error-img {
     width: 100%;
@@ -119,7 +130,7 @@ ul {
     margin-top: 80px;
     font-size: large;
   }
-  #offcanvasNavbar{
+  #offcanvasNavbar {
     width: 60%;
     height: auto;
   }

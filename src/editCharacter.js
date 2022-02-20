@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useParams,useHistory} from "react-router-dom";
 
-
+// edit characters form and logic
  export  function EditCharacters({initialList,setInitialList}) {
     const { id } = useParams();
     const newList = initialList[id];
@@ -16,6 +16,7 @@ import { useParams,useHistory} from "react-router-dom";
   
    return (
         <div className="character_form">
+          {/* Textfields (Material UI) */}
          <TextField
           label="Character Poster(url)"
           value={characterPoster}
@@ -37,12 +38,14 @@ import { useParams,useHistory} from "react-router-dom";
           value={characterWeapons}
           onChange={(event) => setCharacterWeapons(event.target.value)} />
         <Button variant="contained" className="button" onClick={()=>{
+        
            const updatedCharacters = {
              name: characterName,
              post: characterPoster,
              Superpowers: characterSuperpower,
              Weapons: characterWeapons,
             };
+          
             const copyList=[...initialList]
             copyList[id]=updatedCharacters
         

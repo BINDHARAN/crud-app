@@ -3,8 +3,10 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
+//Addcharacters component 
  export  function AddCharacters({initialList,setInitialList}) {
   const history = useHistory()
+
   const [characterName, setCharacterName] = useState("");
   const [characterPoster, setCharacterPoster] = useState("");
   const [characterSuperpower, setSuperPower] = useState("");
@@ -12,6 +14,7 @@ import { useHistory } from "react-router-dom";
 
    return (
         <div className="character_form">
+          {/*  Textfields (Material UI) */}
          <TextField
           label="Character Poster(url)"
           variant="outlined"
@@ -29,6 +32,8 @@ import { useHistory } from "react-router-dom";
           variant="outlined"
           onChange={(event) => setCharacterWeapons(event.target.value)} />
           <Button variant="contained" className="button" onClick={()=>{
+           
+           // new character
            const newCharacters = {
              name: characterName,
              post: characterPoster,
@@ -36,8 +41,11 @@ import { useHistory } from "react-router-dom";
              Weapons: characterWeapons,
             
            };
-       
+      
+           // copy previous characters and add new characters using speard operator
            setInitialList([...initialList, newCharacters]);
+      
+           //URL change
            history.push("/characters")
 
         }} 
