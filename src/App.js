@@ -1,6 +1,6 @@
 //import
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { list } from "./list";
 import { useState } from "react";
 import { Msg } from './Msg';
@@ -10,6 +10,7 @@ import { AddCharacters } from "./addCharacters";
 import { EditCharacters } from "./editCharacter";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap'
+import Button from '@mui/material/Button';
 
 // App component
 
@@ -17,12 +18,13 @@ export default function App() {
 
   const [initialList, setInitialList] = useState(list)
 
+  const history = useHistory()
   return (
     <div className="App">
       {/* bootstrap  offcanvas Navabr */}
       <Navbar bg="dark" variant="dark" expand={false}>
         <Container fluid>
-          <Navbar.Brand>Marvel Characters</Navbar.Brand>
+          <Navbar.Brand className="nav_title">Marvel Characters</Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
@@ -35,18 +37,20 @@ export default function App() {
             <Offcanvas.Body>
 
               <Nav className="justify-content-end flex-grow-1 pe-3">
+
                 <ul>
 
                   <li>
-                    <Link to="/">Home</Link>
+                    <Button color="inherit" onClick={() => history.push("/")}>Home</Button>
+
                   </li>
 
                   <li>
-                    <Link to="/characters" >characters</Link>
+                    <Button color="inherit" onClick={() => history.push("/characters")}>characters</Button>
                   </li>
 
                   <li>
-                    <Link to="/characters/add" >Add-characters</Link>
+                    <Button color="inherit" onClick={() => history.push("/characters/add")}>Add characters</Button>
                   </li>
 
                 </ul>

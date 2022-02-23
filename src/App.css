@@ -24,7 +24,9 @@
 .nav {
   margin-bottom: 150px;
 }
-
+.nav_title {
+  font-family: var(--font-serif);
+}
 /* card img  and hover effect*/
 
 .img {
@@ -77,11 +79,9 @@ ul {
   gap: 30px;
   display: flex;
   flex-direction: column;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 400;
   list-style-type: circle;
 }
+
 #offcanvasNavbar {
   background-color: rgb(240, 240, 243);
   color: black;
@@ -91,7 +91,7 @@ ul {
 /* styling home page text */
 
 .home {
-  margin-top: 190px;
+  margin-top: 270px;
   font-size: xx-large;
   font-family: var(--font-serif);
 }
@@ -127,7 +127,6 @@ ul {
 
 @media only screen and (max-width: 500px) {
   .home {
-    margin-top: 80px;
     font-size: large;
   }
   #offcanvasNavbar {
